@@ -18,8 +18,14 @@ let actions = {
       type: 'DELETE_TODO',
       id: id
     }
-  }
+  },
 
+  createNewuserId: function() {
+  	return {
+  		type: 'CREATE_USER_ID',
+  		id: Math.round(Math.random() * 100)
+  	}
+  }
 }
 
 export default actions
