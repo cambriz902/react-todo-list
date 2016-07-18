@@ -9,7 +9,11 @@ let initialState = {
     id: 0,
     completed: false,
     text: 'Initial todo for demo purposes'
-  }]
+  }],
+  user: {
+    id: 13,
+    username: 'kurt'
+  }
 }
 
 let store = configureStore(initialState)

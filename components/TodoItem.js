@@ -12,7 +12,7 @@ class TodoItem extends Component {
 
   render() {
     return (
-      <li >
+      <li>
         <div>{this.props.todo.text}</div>
         <button onClick={this.handleComplete.bind(this)}>Mark as completed</button>
         <button onClick={this.handleDelete.bind(this)}>Delete todo</button>
