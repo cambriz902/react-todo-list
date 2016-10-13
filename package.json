@@ -4,7 +4,10 @@
   "description": "A simple todo list app built with React, Redux and Webpack",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "serve": "nodemon server/server.js --ignore components"
+    "serve": "nodemon server/server.js --ignore components",
+    "webpack:deploy": "webpack -p",
+    "heroku-postbuild": "npm run webpack:deploy",
+    "start": "node serve/server.js"
   },
   "repository": {
     "type": "git",
