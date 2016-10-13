@@ -21,8 +21,14 @@ app.use(webpackHotMiddleware(compiler));
 
 app.use(express.static('./dist'));
 
-app.get('/', function (req, res) {
-    res.sendFile(path.resolve('client/index.html'));
+// app.use('/', function (req, res) {
+//     res.sendFile(path.resolve('client/index.html'));
+// });
+
+app.get('/', function(req, res) {
+
+    // ejs render automatically looks in the views folder
+    res.render(path.resolve('client/index.html'));
 });
 
 var port = process.env.PORT || 4000;
