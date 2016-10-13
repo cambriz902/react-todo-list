@@ -35,6 +35,6 @@
     "babel-preset-react-hmre": "^1.1.1"
   },
   "engines": {
-    "node": "4.1.1"
+    "node": "6.3.1"
   }
 }
