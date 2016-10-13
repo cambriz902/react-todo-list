@@ -17,7 +17,7 @@ app.use(webpackDevMiddleware(compiler, {noInfo: true, publicPath: config.output.
 app.use(webpackHotMiddleware(compiler));
 
 // set the view engine to ejs
-// app.set('view engine', 'ejs');
+app.set('view engine', 'ejs');
 
 app.use(express.static('./dist'));
 
@@ -25,11 +25,11 @@ app.use('/', function (req, res) {
     res.sendFile(path.resolve('client/index.html'));
 });
 
-// app.get('/', function(req, res) {
+app.get('/', function(req, res) {
 
-//     // ejs render automatically looks in the views folder
-//     res.render('index');
-// });
+    // ejs render automatically looks in the views folder
+    res.render('index');
+});
 
 var port = process.env.PORT || 4000;
 
