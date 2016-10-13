@@ -16,13 +16,22 @@ var compiler = webpack(config);
 app.use(webpackDevMiddleware(compiler, {noInfo: true, publicPath: config.output.publicPath}));
 app.use(webpackHotMiddleware(compiler));
 
+// set the view engine to ejs
+// app.set('view engine', 'ejs');
+
 app.use(express.static('./dist'));
 
 app.use('/', function (req, res) {
     res.sendFile(path.resolve('client/index.html'));
 });
 
-var port = process.env.PORT 4000;
+// app.get('/', function(req, res) {
+
+//     // ejs render automatically looks in the views folder
+//     res.render('index');
+// });
+
+var port = process.env.PORT || 4000;
 
 app.listen(port, function(error) {
   if (error) throw error;
