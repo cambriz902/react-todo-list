@@ -17,7 +17,7 @@ app.use(webpackDevMiddleware(compiler, {noInfo: true, publicPath: config.output.
 app.use(webpackHotMiddleware(compiler));
 
 // set the view engine to ejs
-app.set('view engine', 'ejs');
+app.set('client engine', 'js');
 
 app.use(express.static('./dist'));
 
